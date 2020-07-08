@@ -7,7 +7,7 @@ public class ImageResizer {
     //private static long MAX_SIZE = 360000;
     //private static long THUMB_SIZE = 6553;
 
-    public static Bitmap reduceBitmapSize(Bitmap bitmap, MAX_SIZE) {
+    public static Bitmap reduceBitmapSize(Bitmap bitmap,int MAX_SIZE) {
         double ratioSquare;
         int bitmapHeight, bitmapWidth;
         bitmapHeight = bitmap.getHeight();
@@ -22,7 +22,7 @@ public class ImageResizer {
         return Bitmap.createScaledBitmap(bitmap, requiredWidth, requiredHeight, true);
     }
 
-    public static Bitmap generateThumb(Bitmap bitmap) {
+    public static Bitmap generateThumb(Bitmap bitmap, int THUMB_SIZE) {
         double ratioSquare;
         int bitmapHeight, bitmapWidth;
         bitmapHeight = bitmap.getHeight();
